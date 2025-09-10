@@ -171,7 +171,7 @@ const SingleUserPage = () => {
               <h1 className="text-xl font-semibold">Dukey</h1>
             </div>
             <p className="text-sm text-muted-foreground">
-              This is Dukey's profile. Dukey is an active member of the
+              This is Dukey&apos;s profile. Dukey is an active member of the
               community and has contributed significantly to various projects.
               Feel free to reach out to Dukey for collaboration or inquiries.
             </p>
