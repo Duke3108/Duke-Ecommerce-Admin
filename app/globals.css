@@ -120,3 +120,12 @@
     @apply bg-background text-foreground;
   }
 }
+/* Ẩn scrollbar mặc định */
+.scroll-hide::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.scroll-hide {
+  -ms-overflow-style: none;  /* IE và Edge */
+  scrollbar-width: none;     /* Firefox */
+}
