@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Duke Admin",
+  title: "Dashboard",
   description: "Admin dashboard for Duke E-commerce",
 };
 
@@ -27,9 +27,8 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-
-  const cookieStore = await cookies()
-  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true"
+  const cookieStore = await cookies();
+  const defaultOpen = cookieStore.get("sidebar_state")?.value === "true";
   return (
     <html lang="en" suppressHydrationWarning>
       <body
@@ -45,9 +44,7 @@ export default async function RootLayout({
             <AppSidebar />
             <main className="w-full">
               <Navbar />
-              <div className="px-4">
-                {children}
-              </div>
+              <div className="px-4">{children}</div>
             </main>
           </SidebarProvider>
         </ThemeProvider>
