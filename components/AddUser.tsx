@@ -41,21 +41,14 @@ const formSchema = z.object({
     .max(100),
 });
 
-const EditUser = () => {
+const AddUser = () => {
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
-    defaultValues: {
-      fullname: "Dukey",
-      email: "tuoc31082004@gmail.com",
-      phone: "0918516514",
-      address: "123 street",
-      city: "Ho Chi Minh",
-    },
   });
   return (
     <SheetContent>
       <SheetHeader>
-        <SheetTitle className="mb-4">Edit User</SheetTitle>
+        <SheetTitle className="mb-4">Add User</SheetTitle>
         <SheetDescription asChild>
           <Form {...form}>
             <form className="space-y-8">
@@ -153,4 +146,4 @@ const EditUser = () => {
   );
 };
 
-export default EditUser;
+export default AddUser;

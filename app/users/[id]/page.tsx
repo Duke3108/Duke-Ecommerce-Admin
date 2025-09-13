@@ -1,4 +1,3 @@
-import CardList from "@/components/CardList";
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -15,7 +14,6 @@ import {
 import { Sheet, SheetTrigger } from "@/components/ui/sheet";
 import { BadgeCheck, Candy, Citrus, Shield } from "lucide-react";
 import { Progress } from "@/components/ui/progress";
-import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import EditUser from "@/components/EditUser";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
@@ -106,6 +104,21 @@ const SingleUserPage = () => {
               </HoverCard>
             </div>
           </div>
+          {/* USER CARD CONTAINER */}
+          <div className="bg-primary-foreground p-4 rounded-lg space-y-3">
+            <div className="flex items-center gap-2">
+              <Avatar className="size-12">
+                <AvatarImage src="/logo.png" />
+                <AvatarFallback>DU</AvatarFallback>
+              </Avatar>
+              <h1 className="text-xl font-semibold">Dukey</h1>
+            </div>
+            <p className="text-sm text-muted-foreground">
+              This is Dukey&apos;s profile. Dukey is an active member of the
+              community and has contributed significantly to various projects.
+              Feel free to reach out to Dukey for collaboration or inquiries.
+            </p>
+          </div>
           {/* INFORMATION CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <div className="flex items-center justify-between">
@@ -132,7 +145,7 @@ const SingleUserPage = () => {
                 <Progress value={66} />
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Username:</span>
+                <span className="font-bold">Fullname:</span>
                 <span>Dukey</span>
               </div>
               <div className="flex items-center gap-2">
@@ -144,38 +157,19 @@ const SingleUserPage = () => {
                 <span>0918516514</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Location:</span>
-                <span>Ho Chi Minh, Viet Nam</span>
+                <span className="font-bold">Address:</span>
+                <span>123 street</span>
               </div>
               <div className="flex items-center gap-2">
-                <span className="font-bold">Role:</span>
-                <Badge>Admin</Badge>
+                <span className="font-bold">City:</span>
+                <span>Ho Chi Minh</span>
               </div>
             </div>
             <p className="text-sm text-muted-foreground mt-4">Joined on 2025</p>
           </div>
-          {/* CARD LIST CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg">
-            <CardList title="Recent Transactions" />
-          </div>
         </div>
         {/* RIGHT */}
         <div className="w-full xl:w-2/3 space-y-6">
-          {/* USER CARD CONTAINER */}
-          <div className="bg-primary-foreground p-4 rounded-lg space-y-3">
-            <div className="flex items-center gap-2">
-              <Avatar className="size-12">
-                <AvatarImage src="/logo.png" />
-                <AvatarFallback>DU</AvatarFallback>
-              </Avatar>
-              <h1 className="text-xl font-semibold">Dukey</h1>
-            </div>
-            <p className="text-sm text-muted-foreground">
-              This is Dukey&apos;s profile. Dukey is an active member of the
-              community and has contributed significantly to various projects.
-              Feel free to reach out to Dukey for collaboration or inquiries.
-            </p>
-          </div>
           {/* CHART CONTAINER */}
           <div className="bg-primary-foreground p-4 rounded-lg">
             <h1 className="text-xl font-semibold">User Activity</h1>
